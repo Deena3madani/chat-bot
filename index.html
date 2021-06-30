@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <title> ARM BASE CONTROL</title>
+
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+
+body {
+  background-color: LightBlue ;
+}
+
+.button {
+ background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position:fixed; 
+}
+.button:active {
+  background-color: #008CBA;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#stop{
+top: 35%;
+left: 43%;
+}
+
+#Right{
+top: 35%;
+right: 35%;
+}
+
+#Left{
+top: 35%;
+left: 30%;
+}
+
+#Forward{
+top: 20%;
+right: 49%;
+}
+
+#Backward{
+top: 50%;
+right: 49%;
+}
+
+.solid {
+    border-style: solid;
+    height: 395px;
+}
+div {
+  background-color: white;
+  height: 400px;
+}
+@media screen and (max-width: 1000px) {
+  .button,.button:active{
+    width:initial;
+    padding: 15px 25px;
+    position:fixed; 
+
+   }
+}
+
+</style>
+
+    </head>
+
+    <body>
+
+        <br>
+        <h1><center> ARM BASE CONTROL INTERFACE </center></h1>
+        <br>
+        <div>
+      <p class="solid"><br>
+      
+       
+   <form   action="http://192.168.64.2/Arm%20base%20control/conn.php" method="POST" >   
+        <center><button class="button" name="stop"        id="stop"     onclick= "change('Stop')"  >Stop</button>       </center>
+        <center><button class="button" name="Right"       id="Right"    onclick= "change('Right')"  >Right</button>     </center>
+        <center><button class="button" name="left"        id="Left"     onclick= "change('Left')"  >Left</button>       </center>
+        <center><button class="button" name="Forward"     id="Forward"  onclick= "change('Forwad')" >Forward</button>   </center>
+        <center><button class="button" name="Backward"    id="Backward" onclick= "change('Backward')"  >Backward</button></center>     
+        </p>
+      </div>
+
+<script>
+
+  function change(value){
+  document.getElementById("v").value= value;
+  }
+
+</script>
+
+ <input type="hidden" id="v" name="v">
+</form>
+
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "17ab7ad1-e8a3-416a-a11a-fdcc76f52ad2", // The ID of this integration.
+      region: "eu-de", // The region your integration is hosted in.
+      serviceInstanceID: "d0b99f7a-0794-4c1e-8ee2-6a6270c54433", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+
+</html>
