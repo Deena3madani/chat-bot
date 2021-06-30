@@ -1,4 +1,4 @@
-# chat-bot with Arm_Base_Controller
+# chat_bot with Arm_Base_Controller
 
 This project contains the third task of IoT department of the smart methods company.
 
