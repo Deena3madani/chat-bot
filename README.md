@@ -3,11 +3,18 @@
 This project contains the third task of IoT department of the smart methods company.
 
 The task is to add a chat bot to the interface of the control panel, which controls the movement of the base on which the robot arm is installed.
-The name of the chat bot is superfoods bot. It provides list of super food that maintain the health
+
+The name of the chat bot is superfoods bot. It provides list of super food that maintain the health.
 
 index.html:Creation of the Interface with the chat bot.
 
 skill-Superfoods-bot.json:Creation of the chat bot.
+
+
+
+
+
+
 
 connection.php:Open the connection to the database. 
 
